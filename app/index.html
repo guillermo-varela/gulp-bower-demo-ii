@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gulp-Bower Demo">
+  <link rel="icon" href="assets/img/favicon.ico">
+
+  <title>Gulp-Bower Demo</title>
+
+  <!-- build:css css/vendor.min.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css css/styles.min.css -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <!-- endinject -->
+  <!-- endbuild -->
+
+  <!-- build:js js/vendor.min.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js js/scripts.min.js -->
+  <!-- inject:js -->
+  <script src="js/hello.js"></script>
+  <script src="js/printer.js"></script>
+  <!-- endinject -->
+  <!-- endbuild -->
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Gulp-Bower Demo</a>
+      </div>
+
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="title">
+      <h1>Bootstrap-Gulp-Bower starter template</h1>
+      <p class="lead">
+        Use this document as a way to quickly start any new project.
+      </p>
+    </div>
+
+    <span id="first" class="text1"></span>
+    <br/>
+    <span id="second" class="text2"></span>
+  </div>
+
+  <script>
+    document.getElementById('first').innerHTML = helloWorld();
+    document.getElementById('second').innerHTML = printer('Hello World');
+  </script>
+</body>
+
+</html>
